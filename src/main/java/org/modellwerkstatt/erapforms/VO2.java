@@ -17,6 +17,5 @@ public class VO2 extends AbstractEntryPoint {
 
         ExitConfirmation service = RWT.getClient().getService( ExitConfirmation.class );
         service.setMessage( "Do you really wanna leave the party?" );
-
     }
 }

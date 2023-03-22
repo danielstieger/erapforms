@@ -39,6 +39,7 @@ dependencies {
     // moware dependencies * * * * * * * * * * * * * * * * *
     implementation files("lib/org.eclipse.rap.rwt_3.24.0.20230221-1048.jar")
     implementation files("lib/org.eclipse.rap.jface_3.24.0.20221223-1415.jar")
+    implementation files("lib/org.eclipse.rap.design.example_3.24.0.20221223-1415.jar")
 
     implementation files("${mowarePluginHome}/jars/basis/joda-time-2.10.jar")
     implementation files("${mowarePluginHome}/jars/basis/spring-core-5.2.9.RELEASE.jar")
@@ -73,11 +74,33 @@ war {
     from(appClassesHome) {
         into 'WEB-INF/classes'
     }
+
+    from('artefact') {
+        include 'business.css'
+        into('WEB-INF/classes/rwt-resources/themes')
+    }
+
+    from('artefact') {
+        include 'business.css'
+        into('WEB-INF/rwt-resources/themes')
+    }
+
+    from('artefact') {
+        include 'business.css'
+        into('rwt-resources/themes')
+    }
+
+
+    from('artefact') {
+        include 'context.xml'
+        into('META-INF')
+    }
 }
 
 
 task ZZ_tomcatHotDeploy(type: Copy) {
     dependsOn(war)
+
     from war.archivePath
     into "${tomcatHome}/webapps"
 }

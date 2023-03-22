@@ -29,7 +29,7 @@ public class VO1 extends AbstractEntryPoint {
         for (String title : titles) {
             TableColumn column = new TableColumn(table, SWT.NONE);
             column.setText (title);
-            column.setWidth(100);
+            column.setWidth(200);
          }
 
 
@@ -63,7 +63,6 @@ public class VO1 extends AbstractEntryPoint {
         // (1) Selection Listener & second Table with changes 100
         // (2) Table Lazyloading
         // (3) Prompt Dialog
-
 
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 1;

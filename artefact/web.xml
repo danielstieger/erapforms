@@ -45,6 +45,17 @@
 
     <servlet-mapping>
         <servlet-name>rwtServlet</servlet-name>
-        <url-pattern>/erapforms</url-pattern>
+        <url-pattern>/vo1/*</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>rwtServlet</servlet-name>
+        <url-pattern>/vo2</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>rwtServlet</servlet-name>
+        <url-pattern>/vo3</url-pattern>
+    </servlet-mapping>
+
 </web-app>
