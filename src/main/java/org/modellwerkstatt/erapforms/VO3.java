@@ -82,6 +82,15 @@ public class VO3 extends AbstractEntryPoint {
                     }
                 });
 
+                dialog.addListener(SWT.Close, new Listener()
+                {
+                    public void handleEvent(Event event)
+                    {
+                        t.setText("This was the dialog.listener()");
+                        event.doit = false;
+                    }
+                });
+
                 dialog.pack();
                 dialog.open();
             }
